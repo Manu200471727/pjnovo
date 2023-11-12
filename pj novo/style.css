@@ -179,10 +179,6 @@
     font-size: 1em;
     color: #777;
   }
- 
-
- 
-  
   
   .container-log {
     max-width: 800px;
@@ -250,16 +246,23 @@
   }
 
   .product-details h2 {
-    margin-top: 0;
+   font-size: 3.0em;
+   margin-left: 75px;
+   margin-top: 0;
   }
-
+  .product-details p {
+    font-size: 2.0em;
+     margin-top: 0;
+   }
   .product-details p {
     color: #555;
+    margin-left: 75px;
   }
 
   .price {
     color: #28a745;
-    font-size: 1.5em;
+    font-size: 2.0em;
+
     margin-bottom: 10px;
   }
 
@@ -270,5 +273,11 @@
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1em;
+    font-size: 2em;
+    margin-top: 70px;
+    margin-left: 75px;
+  }
+  .informe{
+    background-color: #c2b0b0;
+    border-radius: 20px;
   }
