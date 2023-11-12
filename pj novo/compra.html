@@ -1,85 +1,172 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" type="text/css" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
-<title>ArchiStyle</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+  <title>ArchiStyle</title>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 <body style="font-family:sans-serif;">
- 
-    <body class="p-3 m-0 border-0 bd-example m-0 border-0">
-<div style="background-color:#BD7C3A;padding:30px;color:#fff;text-align:center;font-size:30px;;">
-  <h1>ArchiStyle</h1>
-  <img src="img/logo.png" style="width:100px; position: absolute; top: 20px; left: 20px;" alt="Logo">
-</div>
-<style>
-.body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
-  }
 
-  .container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    box-sizing: border-box;
-  }
-  </style>
-  </head>
-
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="index.html">Home</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarText">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="produto.html">Lançamento</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="produto.html">Promoçãos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="login.html">Login</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="produto.html">Estofados</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="produto.html">Móveis</a>
-        </li>
-      </ul>
-      <span class="navbar-text"></span>
+  <body class="p-3 m-0 border-0 bd-example m-0 border-0">
+    <div style="background-color:#BD7C3A;padding:30px;color:#fff;text-align:center;font-size:30px;;">
+      <h1>ArchiStyle</h1>
+      <img src="img/logo.png" style="width:100px; position: absolute; top: 20px; left: 20px;" alt="Logo">
     </div>
-  </div>
-</nav>
+    <style>
+      .body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+      }
 
-<body>
+      .container {
+        max-width: 1000px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        box-sizing: border-box;
+      }
 
-    <div class="container">
-      <div class="product">
-        <div class="product-image">
-          <img src="img/pexels-jonathan-borba-3255245.jpg" alt="Produto">
-        </div>
-        <div class="product-details">
-          <h2>Nome do Produto</h2>
-          <p>Tipo/Marca do Produto</p>
-          <p class="price">R$ 99,99</p>
-          <button class="btn-add-to-cart">Adicionar ao Carrinho</button>
+      .p {
+    font-size: 3.0em;
+     margin-top: 0;
+   }
+    </style>
+    </head>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Home</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="produto.html">Móveis</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="compra.html">Meu carrinho</a>
+            </li>
+          </ul>
+          <span class="navbar-text"></span>
         </div>
       </div>
-    </div>
+    </nav>
+
+    <body>
+     
+      
+      <div class="container">
+        <div class="product">
+          <div class="product-image">
+            <img src="img/pexels-jonathan-borba-3255245.jpg" alt="Produto">
+          </div>
+          <div class="product-details">
+            <h2>Mesa de Madeira c/4 cadeiras</h2>
+            <p>Madeira rústica/Oliveira móveis</p>
+            <p class="price">R$ 2599,99</p>
+            <button class="btn-add-to-cart">Adicionar ao Carrinho</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <h2>Informações técnicas:</h2>
+        <p>"Mesa para Sala de Jantar Redonda 4 Lugares 115cm Seiva CabeCasa MadeiraMadeira
+          Com Design moderno e sofisticado, a mesa de Jantar Seiva é uma excelente proposta para quem busca por um móvel funcional e cheio de personalidade para compor o ambiente de jantar. Com linhas retas e encaixes evidentes, o produto chama a atenção pela sua estrutura leve e fluida, o que dá a sensação de flutualibilidade. Além de se destacar pelo seu design contemporaneo, a Mesa possui ainda um excelente espaço, podendo acomodar 4 pessoas confortavelmente.
+          A Mesa Seiva é produzida em madeira maciça de reflorestamento Pinus, tingida com verniz, matérias-primas e acabamentos que garantem a resistência e a durabilidade."</p>
+      </div>
+
+      <div class="card-container">
+        <div class="card">
+          <img src="img/pexels-max-rahubovskiy-7005300.jpg" alt="Produto 1">
+          <div class="card-content">
+            <h3>Cuba moderna c/cadeiras</h3>
+            <p>R$ 599,90</p>
+          </div>
+        </div>
+        
+        <div class="card">
+          <img src="img/pexels-rachel-claire-4993081.jpg" alt="Produto 2">
+          <div class="card-content">
+            <h3>Quadro decorativo de cacto</h3>
+            <p>R$ 129,90</p>
+          </div>
+        </div>
+          
+          <div class="card">
+          <img src="img/pexels-leah-kelley-6480707.jpg" alt="Produto 3">
+          <div class="card-content">
+            <h3>Sofá c/alomofadas</h3>
+            <p>R$ 1300,00</p>
+          </div>
+        </div>
+            <div class="card">
+          <img src="img/pexels-ksenia-chernaya-3965521.jpg" alt="Produto 4">
+          <div class="card-content">
+            <h3>Banheira vintage</h3>
+            <p>R$ 890,00</p>
+          </div>
+        </div></div>
+
+        <div class="card-container">
+          <div class="card">
+            <img src="img/pexels-max-rahubovskiy-7005300.jpg" alt="Produto 1">
+            <div class="card-content">
+              <h3>Cuba moderna c/cadeiras</h3>
+              <p>R$ 599,90</p>
+            </div>
+          </div>
+          
+          <div class="card">
+            <img src="img/pexels-rachel-claire-4993081.jpg" alt="Produto 2">
+            <div class="card-content">
+              <h3>Quadro decorativo de cacto</h3>
+              <p>R$ 129,90</p>
+            </div>
+          </div>
+            
+            <div class="card">
+            <img src="img/pexels-leah-kelley-6480707.jpg" alt="Produto 3">
+            <div class="card-content">
+              <h3>Sofá c/alomofadas</h3>
+              <p>R$ 1300,00</p>
+            </div>
+          </div>
+              <div class="card">
+            <img src="img/pexels-ksenia-chernaya-3965521.jpg" alt="Produto 4">
+            <div class="card-content">
+              <h3>Banheira vintage</h3>
+              <p>R$ 890,00</p>
+            </div>
+          </div></div>
     
-    </body>
-    </html>
+
+    
+<footer>
+  <div class="logo-footer">
+    <img src="img/logo.png" alt="Logo da loja">
+  </div>
+  <div>
+        <p>Endereço: Rua José Peres, 100</p>
+        <p>Telefone: (11) 4002-8922</p>
+        <p>Email: archistyle@hotmail.com</p>
+        <p>Sac:0800-500-1000</p>
+        </div>
+      </body>
+      </footer>
+</html
