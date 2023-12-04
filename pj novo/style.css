@@ -274,7 +274,20 @@
     border-radius: 5px;
     cursor: pointer;
     font-size: 2em;
-    margin-top: 70px;
+    margin-top: 25px;
+    margin-left: 105px;
+  }
+  
+  .btn-add {
+    background-color: #bde6c0;
+    border: 2px solid #b7e6a2;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    border-radius: 5px;
+    bottom: border;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 40px;
     margin-left: 75px;
   }
   .informe{
