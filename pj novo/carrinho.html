@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Carrinho de Compras</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" type="text/css" href="compra.html">
+ 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+</head>
+<script>
+ document.addEventListener('DOMContentLoaded', function() {
+  const botoesAdicionarCarrinho = document.querySelectorAll('.adicionar-carrinho');
+  const listaCarrinho = document.getElementById('compra.html');
+  const totalCarrinho = document.getElementById('total-carrinho');
+
+  let carrinho = [];
+
+  function atualizarCarrinho() {
+    listaCarrinho.innerHTML = 'compra.html';
+    let total = 0;
+
+    carrinho.forEach(item => {
+      const li = document.createElement('li');
+      li.textContent = `${item.nome} - R$ ${item.preco.toFixed(2)}`;
+      listaCarrinho.appendChild(li);
+      total += item.preco;
+    });
+
+    totalCarrinho.textContent = total.toFixed(2);
+  }
+
+  function adicionarAoCarrinho(nome, preco) {
+    carrinho.push({ nome, preco });
+    atualizarCarrinho();
+  }
+
+  botoesAdicionarCarrinho.forEach(botao => {
+    botao.addEventListener('click', function() {
+      const nome = this.getAttribute('data-produto');
+      const preco = parseFloat(this.getAttribute('data-preco'));
+      adicionarAoCarrinho(nome, preco);
+    });
+  });
+});
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const precoProduto1 = document.getElementById('preco_produto_1');
+  const precoProduto2 = document.getElementById('preco_produto_2');
+  const precoProduto3 = document.getElementById('preco_produto_3');
+  const precoProduto4 = document.getElementById('preco_produto_4');
+  
+  const quantidadeProduto1 = document.getElementById('quantidade_produto_1');
+  const quantidadeProduto2 = document.getElementById('quantidade_produto_2');
+  const quantidadeProduto3 = document.getElementById('quantidade_produto_3');
+  const quantidadeProduto4 = document.getElementById('quantidade_produto_4');
+  const totalPagar = document.getElementById('total_pagar');
+  const precoFrete = document.getElementById('preco_frete');
+  const totalTudo = document.getElementById('total_tudo');
+
+  const calcularTotal = () => {
+  const valorProduto1 = parseFloat(precoProduto1.textContent);
+  const valorProduto2 = parseFloat(precoProduto2.textContent);
+  const valorProduto3 = parseFloat(precoProduto3.textContent);
+  const valorProduto4 = parseFloat(precoProduto4.textContent);
+  
+  const qtdProduto1 = parseInt(quantidadeProduto1.value);
+  const qtdProduto2 = parseInt(quantidadeProduto2.value);
+  const qtdProduto3 = parseInt(quantidadeProduto3.value);
+  const qtdProduto4 = parseInt(quantidadeProduto4.value);
+
+  const totalProdutos = (valorProduto1 * qtdProduto1) + (valorProduto2 * qtdProduto2) + (valorProduto3 * qtdProduto3) + (valorProduto4 * qtdProduto4);
+  totalPagar.textContent = totalProdutos.toFixed(2);
+
+  // Cálculo de frete fictício (10% do valor total)
+  const precoDoFrete = totalProdutos * 0.1;
+  precoFrete.textContent = precoDoFrete.toFixed(2);
+  
+  const totalTudoValue = totalProdutos + precoDoFrete; // Calcula o total a pagar com frete
+
+  totalTudo.textContent = totalTudoValue.toFixed(2); // Atualiza o elemento no HTML com o total calculado
+};
+
+quantidadeProduto1.addEventListener('input', calcularTotal);
+quantidadeProduto2.addEventListener('input', calcularTotal);
+quantidadeProduto3.addEventListener('input', calcularTotal);
+quantidadeProduto4.addEventListener('input', calcularTotal);
+});
+document.addEventListener('DOMContentLoaded', function () {
+  const cartaoForm = document.getElementById('cartaoForm');
+  const cartaoRadio = document.getElementById('cartao');
+
+  cartaoRadio.addEventListener('click', function () {
+    cartaoForm.classList.remove('hidden');
+  });
+
+  
+    
+
+    alert('Pagamento com cartão processado!'); 
+    paymentForm.reset();
+  
+});
+
+
+</script>
+
+<style>
+  
+  img{
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 20px;
+    float: left;
+  }
+ 
+  body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+      }
+
+      .container {
+        max-width: 1000px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        box-sizing: border-box;
+      }
+
+      h1{
+    text-align: center;
+        font-size: 3.0em;
+     margin-top: 0;}
+   
+     .centraliza{
+      margin-top: 30px;
+      margin-left: 200px;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+     }
+   
+</style>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<body style="font-family:sans-serif;">
+
+  <body class="p-3 m-0 border-0 bd-example m-0 border-0">
+    <div style="background-color:#BD7C3A;padding:30px;color:#fff;text-align:center;font-size:30px;;">
+      <h1 class="h1">ArchiStyle</h1>
+      <img src="img/logo.png" style="width:100px; position: absolute; top: 20px; left: 20px;" alt="Logo">
+    </div>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Home</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="produto.html">Móveis</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="compra.html">Meu carrinho</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="carrinho.html">Finalizar compra</a>
+            </li>
+          </ul>
+          <span class="navbar-text"></span>
+        </div>
+      </div>
+    </nav>
+    <h1>Carrinho de Compras</h1>
+    <div class="container-cacm" class="img-cacm">
+    <div class="produto-cacm">
+      <img src="img/pexels-jonathan-borba-3255245.jpg" alt="Produto 1">
+      <p>Mesa de madeira</p>
+      <p>Preço: R$ <span id="preco_produto_1">1599.00</span></p>
+      <label for="quantidade_produto_1">Quantidade:</label>
+      <input type="number" id="quantidade_produto_1" value="0" min="0">
+    </div></div>
+    
+    <div class="container-cacm">
+    <div class="produto-cacm">
+      <img src="img/enfeite.jpg" alt="Produto 2">
+      <p>Enfeite de mesa</p>
+      <p>Preço: R$ <span id="preco_produto_2">89.90</span></p>
+      <label for="quantidade_produto_2">Quantidade:</label>
+      <input type="number" id="quantidade_produto_2" value="0" min="0">
+    </div></div>
+    
+    <div class="container-cacm">
+    <div class="produto-cacm">
+      <img src="img/mesademadeira.jpg" alt="Produto 3">
+      <p>Mesa rústica</p>
+      <p>Preço: R$ <span id="preco_produto_3">3500.00</span></p>
+      <label for="quantidade_produto_3">Quantidade:</label>
+      <input type="number" id="quantidade_produto_3" value="0" min="0">
+    </div></div>
+    
+    <div class="container-cacm">
+    <div class="produto-cacm">
+      <img src="img/sofaazul.jpg" alt="Produto 4">
+      <p>Sófa Azul</p>
+      <p>Preço: R$ <span id="preco_produto_4">2200.00</span></p>
+      <label for="quantidade_produto_4">Quantidade:</label>
+      <input type="number" id="quantidade_produto_4" value="0" min="0">
+    </div></div>
+    
+     <div class="centraliza">
+      <p>Total dos produtos: R$ <span id="total_pagar">0.00</span></p>
+      <p>Preço do frete: R$ <span id="preco_frete">0.00</span></p>
+      <p>Total a pagar: R$ <span id="total_tudo">0.00</span></p>
+    </div>
+    <h1>Checkout</h1>
+  
+  <div class="payment-methods">
+    <h2>Escolha o método de pagamento:</h2>
+    <input type="radio" id="boleto" name="payment" value="boleto">
+    <label for="boleto">Boleto</label><br>
+    <input type="radio" id="pix" name="payment" value="pix">
+    <label for="pix">PIX</label><br>
+    <input type="radio" id="cartao" name="payment" value="cartao">
+    <label for="cartao">Cartão de Crédito</label><br>
+  </div>
+  
+  <div id="cartaoForm" class="hidden">
+    <h2>Informações do Cartão:</h2>
+    <form id="creditCardForm">
+      <label for="cardNumber">Número do Cartão:</label>
+      <input type="text" id="cardNumber" name="cardNumber" placeholder="XXXX XXXX XXXX XXXX"><br>
+      <label for="expiry">Data de Validade:</label>
+      <input type="text" id="expiry" name="expiry" placeholder="MM/AA"><br>
+      <label for="cvv">CVV:</label>
+      <input type="text" id="cvv" name="cvv" placeholder="XXX"><br>
+      <button type="submit">Pagar</button>
+    </form>
+  </div>
+  
+
+
+
+
+</body>
+</body>
+</body>
+
+  <script src="script.js"></script>
+</body>
+</html>
