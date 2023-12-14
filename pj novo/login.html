@@ -1,14 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" type="text/css" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+  <title>Login</title>
 </head>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
-<title>Login</title>
+<body class="body">
+<style>
 
-<style> 
+
+.body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+}
+
+.container {
+  max-width: 600px;
+  margin: 20px auto; 
+  padding: 20px;
+  background-color: #72490bf7;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
 .body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: url(img/pexels-ksenia-chernaya-3965521.jpg) no-repeat center center fixed;
@@ -20,22 +36,99 @@
     .card-log {
       width: 100%;
     }}
-  </style>
+ 
+ 
+.main{
+	width: 350px;
+	height: 500px;
+	background: red;
+	overflow: hidden;
+	background: url("https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38") no-repeat center/ cover;
+	border-radius: 10px;
+	box-shadow: 5px 20px 50px #000;
+}
+#chk{
+	display: none;
+}
+.signup{
+	position: relative;
+	width:100%;
+	height: 100%;
+}
+label{
+	color: #fff;
+	font-size: 1.7em;
+	justify-content: center;
+	display: flex;
+	margin: 60px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: .5s ease-in-out;
+}
+input{
+	width: 60%;
+	height: 30px;
+	background: #e0dede;
+	justify-content: center;
+	display: flex;
+  margin: 20px auto;
+	padding: 10px;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+}
+button{
+	width: 60%;
+	height: 40px;
+	margin: 10px auto;
+	justify-content: center;
+	display: block;
+	color: #fff;
+	background: #370000;
+	font-size: 1em;
+	font-weight: bold;
+	margin-top: 20px;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	transition: .2s ease-in;
+	cursor: pointer;
+}
+button:hover{
+	background: #914d00;
+}
+.login{
+	height: 460px;
+	background: #eee;
+	border-radius: 60% / 10%;
+	transform: translateY(-180px);
+	transition: .8s ease-in-out;
+}
+.login label{
+	color: #370000;
+	transform: scale(.6);
+}
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<body>
-<body class="p-3 m-0 border-0 bd-example m-0 border-0">
-
- <div style="background-color:#BD7C3A;padding:30px;color:#fff;text-align:center;font-size:30px;;">
-  <h1>ArchiStyle</h1>
-  <img src="img/logo.png" style="width:100px; position: absolute; top: 20px; left: 20px;" alt="Logo">
-</div>
+#chk:checked ~ .login{
+	transform: translateY(-500px);
+}
+#chk:checked ~ .login label{
+	transform: scale(1);	
+}
+#chk:checked ~ .signup label{
+	transform: scale(.6);
+}
 
  
+ </style>
+
+
+</style>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="index.html">Home</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+      aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarText">
@@ -49,57 +142,41 @@
         <li class="nav-item">
           <a class="nav-link" href="compra.html">Meu carrinho</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="carrinho.html">Finalizar compra</a>
+        </li>
       </ul>
       <span class="navbar-text"></span>
     </div>
   </div>
 </nav>
 
-<div class="container-log">
-    <div class="card-log">
-      <h2>Cadastre-se</h2>
-      <div class="form-group">
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required>
-      </div>
-      <div class="form-group">
-        <label for="telefone">Telefone:</label>
-        <input type="tel" id="telefone" name="telefone" required>
-      </div>
-      <div class="form-group">
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" required>
-      </div>
-      <button class="btn-submit" type="submit">Enviar</button>
-    </div>
+<div class="container">
+  <body>
+    <div class="main">  	
+      <input type="checkbox" id="chk" aria-hidden="true">
   
-    <div class="card-log">
-      <h2>Login</h2>
-      <div class="form-group">
-        <label for="loginEmail">E-mail:</label>
-        <input type="email" id="loginEmail" name="loginEmail" required>
-      </div>
-      <div class="form-group">
-        <label for="senha">Senha:</label>
-        <input type="password" id="senha" name="senha" required>
-      </div>
-      <button class="btn-submit" type="submit">Entrar</button>
+        <div class="signup">
+          <form>
+            <label for="chk" aria-hidden="true">Se-inscreva</label>
+            <input type="text" name="txt" placeholder="Nome de usuário" required="">
+            <input type="email" name="email" placeholder="Email" required="">
+            <input type="password" name="pswd" placeholder="Senha" required="">
+            <button>Me inscrever</button>
+          </form>
+        </div>
+  
+        <div class="login">
+          <form>
+            <label for="chk" aria-hidden="true">Login</label>
+            <input type="email" name="email" placeholder="Email" required="">
+            <input type="password" name="pswd" placeholder="Senha" required="">
+            <button>Login</button>
+          </form>
+        </div>
     </div>
-  </div>
+  </body>
 </div>
 
-  <footer>
-    <div class="logo-footer">
-      <img src="img/logo.png" alt="Logo da loja">
-    </div>
-    <div>
-          <p>Endereço: Rua José Peres, 100</p>
-          <p>Telefone: (11) 4002-8922</p>
-          <p>Email: archistyle@hotmail.com</p>
-          <p>Sac:0800-500-1000</p>
-          </div>
-  </footer>
-  </body></body>
-  </html>
-  
-  
+</body>
+</html>
