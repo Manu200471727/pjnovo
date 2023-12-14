@@ -25,16 +25,7 @@
     }
   }
  
-    function buscarItem() {
-      const palavraChave = document.getElementById('palavraChave').value.toLowerCase(); // Obtém a palavra-chave digitada no campo
-      const conteudoSite = document.body.innerText.toLowerCase(); // Obtém todo o conteúdo do site
-
-      if (conteudoSite.includes(palavraChave)) { // Verifica se a palavra-chave está presente no conteúdo do site
-        alert("Item encontrado com a palavra-chave '" + palavraChave + "'.");
-      } else {
-        alert("Nenhum item encontrado com a palavra-chave '" + palavraChave + "'.");
-      }
-    }
+   
   </script>
 
 
@@ -48,7 +39,7 @@
       <img src="img/logo.png" style="width:100px; position: absolute; top: 20px; left: 20px;" alt="Logo">
     </div>
     <style>
-      .body {
+      body {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         margin: 0;
         padding: 0;
@@ -90,6 +81,9 @@
             <li class="nav-item">
               <a class="nav-link" href="compra.html">Meu carrinho</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="carrinho.html">Finalizar compra</a>
+            </li>
           </ul>
           <span class="navbar-text"></span>
         </div>
@@ -115,9 +109,9 @@
             <input type="number" id="quantidade"><br><br>
         
             <button onclick="calcularPrecoTotal()">Calcular</button><br><br>
-            <div id="resultado"></div>  </div>
+            <div id="resultado"></div></div>
            
-            <button class="btn-add-to-cart">Adicionar ao Carrinho</button>
+            <a href="carrinho.html"><button class="btn-add-to-cart">Adicionar ao Carrinho</button></a>
           </div>
         </div>
       </div>
@@ -192,9 +186,11 @@
               <p>R$ 890,00</p>
             </div>
           </div></div>
+        </body>
     
 
     
+  <script src="script.js"></script>
 <footer>
   <div class="logo-footer">
     <img src="img/logo.png" alt="Logo da loja">
