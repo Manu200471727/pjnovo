@@ -1,0 +1,6 @@
+* criação de uma nova página"Finalizar compras"
+* Calcula o preço da quantidade de itens na página "Meu Carrinho"
+* Calcula o preço da quantidade de itens e o frte (10% do produto) na pagina "Finalizar compras"
+* Quando aperta o função cartão de crédito abre uma barra para informações do cartão
+*Quando aperta em "pagar"nessa função aparece uma mensagem da página
+* Nova página de login,melhor estilizada
